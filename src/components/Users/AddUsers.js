@@ -19,7 +19,13 @@ const AddUser=(props)=>{
         if(+enteredAge<1){
             return;
         }
-        console.log(enteredUserName,enteredAge);
+        // console.log(enteredUserName,enteredAge);
+        const newUser={
+            name: enteredUserName,
+            age:enteredAge,
+            id:Math.random().toString()
+        }
+        props.addList(newUser);
         setUserName('');
         setAge('');
     }
